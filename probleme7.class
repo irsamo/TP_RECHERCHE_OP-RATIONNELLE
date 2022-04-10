@@ -111,6 +111,50 @@ public class Probleme7 {
 			cplex.addEq(cplex.sum(cplex.prod(1,x14),cplex.prod(1,x24),cplex.prod(1,x34),cplex.prod(1,x44),cplex.prod(1,x54),cplex.prod(1,x64)), 1);
 			cplex.addEq(cplex.sum(cplex.prod(1,x15),cplex.prod(1,x25),cplex.prod(1,x35),cplex.prod(1,x45),cplex.prod(1,x55),cplex.prod(1,x65)), 1);
 			cplex.addEq(cplex.sum(cplex.prod(1,x16),cplex.prod(1,x26),cplex.prod(1,x36),cplex.prod(1,x46),cplex.prod(1,x56),cplex.prod(1,x66)), 1);
+			// l'affichage des résultats
+			if(cplex.solve()) {
+				System.out.println("Obj ="+ cplex.getObjValue());
+				System.out.println("x11 ="+ cplex.getValue(x11));
+				System.out.println("x12 ="+ cplex.getValue(x12));
+				System.out.println("x13 ="+ cplex.getValue(x13));
+				System.out.println("x14 ="+ cplex.getValue(x14));
+				System.out.println("x15 ="+ cplex.getValue(x15));
+				System.out.println("x16 ="+ cplex.getValue(x16));
+				System.out.println("x21 ="+ cplex.getValue(x21));
+				System.out.println("x22 ="+ cplex.getValue(x22));
+				System.out.println("x23 ="+ cplex.getValue(x23));
+				System.out.println("x24 ="+ cplex.getValue(x24));
+				System.out.println("x25 ="+ cplex.getValue(x25));
+				System.out.println("x26 ="+ cplex.getValue(x26));
+				System.out.println("x31 ="+ cplex.getValue(x31));
+				System.out.println("x32 ="+ cplex.getValue(x32));
+				System.out.println("x33 ="+ cplex.getValue(x33));
+				System.out.println("x34 ="+ cplex.getValue(x34));
+				System.out.println("x35 ="+ cplex.getValue(x35));
+				System.out.println("x36 ="+ cplex.getValue(x36));
+				System.out.println("x41 ="+ cplex.getValue(x41));
+				System.out.println("x42 ="+ cplex.getValue(x42));
+				System.out.println("x43 ="+ cplex.getValue(x43));
+				System.out.println("x44 ="+ cplex.getValue(x44));
+				System.out.println("x45 ="+ cplex.getValue(x45));
+				System.out.println("x46 ="+ cplex.getValue(x46));
+				System.out.println("x51 ="+ cplex.getValue(x51));
+				System.out.println("x52 ="+ cplex.getValue(x52));
+				System.out.println("x53 ="+ cplex.getValue(x53));
+				System.out.println("x54 ="+ cplex.getValue(x54));
+				System.out.println("x55 ="+ cplex.getValue(x55));
+				System.out.println("x56 ="+ cplex.getValue(x56));
+				System.out.println("x61 ="+ cplex.getValue(x61));
+				System.out.println("x62 ="+ cplex.getValue(x62));
+				System.out.println("x63 ="+ cplex.getValue(x63));
+				System.out.println("x64 ="+ cplex.getValue(x64));
+				System.out.println("x65 ="+ cplex.getValue(x65));
+				System.out.println("x66 ="+ cplex.getValue(x66));
+				
+			}
+			else {
+				System.out.println("Model non résolu");
+			}
 		}	
 		catch (IloException exc) {
 			exc.printStackTrace();
