@@ -14,7 +14,89 @@ public class Probleme7 {
 	}
 	public static void model_pb7() {
 		try {
+			IloCplex cplex = new IloCplex();
 			
+			// Les variables de décision
+			IloNumVar x11 = cplex.boolVar();
+			IloNumVar x12 = cplex.boolVar();
+			IloNumVar x13 = cplex.boolVar();
+			IloNumVar x14 = cplex.boolVar();
+			IloNumVar x15 = cplex.boolVar();
+			IloNumVar x16 = cplex.boolVar();
+			IloNumVar x21 = cplex.boolVar();
+			IloNumVar x22 = cplex.boolVar();
+			IloNumVar x23 = cplex.boolVar();
+			IloNumVar x24 = cplex.boolVar();
+			IloNumVar x25 = cplex.boolVar();
+			IloNumVar x26 = cplex.boolVar();
+			IloNumVar x31 = cplex.boolVar();
+			IloNumVar x32 = cplex.boolVar();
+			IloNumVar x33 = cplex.boolVar();
+			IloNumVar x34 = cplex.boolVar();
+			IloNumVar x35 = cplex.boolVar();
+			IloNumVar x36 = cplex.boolVar();
+			IloNumVar x41 = cplex.boolVar();
+			IloNumVar x42 = cplex.boolVar();
+			IloNumVar x43 = cplex.boolVar();
+			IloNumVar x44 = cplex.boolVar();
+			IloNumVar x45 = cplex.boolVar();
+			IloNumVar x46 = cplex.boolVar();
+			IloNumVar x51 = cplex.boolVar();
+			IloNumVar x52 = cplex.boolVar();
+			IloNumVar x53 = cplex.boolVar();
+			IloNumVar x54 = cplex.boolVar();
+			IloNumVar x55 = cplex.boolVar();
+			IloNumVar x56 = cplex.boolVar();
+			IloNumVar x61 = cplex.boolVar();
+			IloNumVar x62 = cplex.boolVar();
+			IloNumVar x63 = cplex.boolVar();
+			IloNumVar x64 = cplex.boolVar();
+			IloNumVar x65 = cplex.boolVar();
+			IloNumVar x66 = cplex.boolVar();
+			
+			
+			// L'expression de la fonction objective
+			IloLinearNumExpr objective = cplex.linearNumExpr();
+			objective.addTerm(35, x11);
+			objective.addTerm(12, x12);
+			objective.addTerm(16, x13);
+			objective.addTerm(38, x14);
+			objective.addTerm(5, x15);
+			objective.addTerm(2, x16);
+			objective.addTerm(25, x21);
+			objective.addTerm(8, x22);
+			objective.addTerm(9, x23);
+			objective.addTerm(24, x24);
+			objective.addTerm(6, x25);
+			objective.addTerm(8, x26);
+			objective.addTerm(12, x31);
+			objective.addTerm(8, x32);
+			objective.addTerm(11, x33);
+			objective.addTerm(27, x34);
+			objective.addTerm(3, x35);
+			objective.addTerm(2, x36);
+			objective.addTerm(38, x41);
+			objective.addTerm(15, x42);
+			objective.addTerm(14, x43);
+			objective.addTerm(30, x44);
+			objective.addTerm(2, x45);
+			objective.addTerm(9, x46);
+			objective.addTerm(0, x51);
+			objective.addTerm(9, x52);
+			objective.addTerm(8, x53);
+			objective.addTerm(25, x54);
+			objective.addTerm(10, x55);
+			objective.addTerm(5, x56);
+			objective.addTerm(0, x61);
+			objective.addTerm(0, x62);
+			objective.addTerm(0, x63);
+			objective.addTerm(14, x64);
+			objective.addTerm(6, x65);
+			objective.addTerm(7, x66);
+			
+			// l'objectif 
+			cplex.addMinimize(objective);
+		}	
 		catch (IloException exc) {
 			exc.printStackTrace();
 		}
