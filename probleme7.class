@@ -5,10 +5,19 @@ Ould Moussa Mohamed Bouasira
 Ait Ali Sara
 
 Problème 7 : Correspondance d’avions*/
+import ilog.concert.*;
+import ilog.cplex.*;
 public class Probleme7 {
 
 	public static void main(String[] args) {
-
+		model_pb7();
+	}
+	public static void model_pb7() {
+		try {
+			
+		catch (IloException exc) {
+			exc.printStackTrace();
+		}
 	}
 
 }
